@@ -95,10 +95,17 @@ header {
     text-align: right;
   }
 
+  .fa-bars {
+    color: $primary;
+  }
+
+  .fa-xmark {
+    color: $white;
+  }
+
   .fa-bars,
   .fa-xmark {
     font-size: 1.5rem;
-    color: $primary;
 
     @include tablet-small {
       font-size: 2rem;
@@ -127,16 +134,20 @@ header {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: $black;
+  background: linear-gradient(to bottom, $primary 0%, $secondary 100%);
   height: 100vh;
   width: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 
+  @include desktop-xlarge {
+    background: black;
+  }
+
   a {
     transform: translate3d(-100px, 0, 0);
     transition: transform 0.15s ease-in;
-    color: $primary;
+    color: $white;
   }
 
   .menu-inner {
@@ -144,6 +155,10 @@ header {
     height: 100%;
     width: 80vw;
     padding: 1.5rem;
+
+    @include tablet-large {
+      width: 50vw;
+    }
   }
 }
 
@@ -171,9 +186,17 @@ header {
 }
 
 // This media query sets the width of the menu to be larger on a smaller screen
-@media screen and (max-width: 767px) {
-  .menu--active .menu {
-    width: 80%;
+// @media screen and (max-width: 767px) {
+//   .menu--active .menu {
+//     width: 50%;
+//   }
+// }
+
+.menu--active .menu {
+  width: 80%;
+
+  @include tablet-large {
+    width: 50%;
   }
 }
 
@@ -213,6 +236,7 @@ header {
       a {
         transform: none;
         transition: none;
+        color: $primary;
       }
 
       .version,
