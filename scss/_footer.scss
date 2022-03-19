@@ -1,0 +1,22 @@
+@use './breakpoints' as *;
+@use './colors' as *;
+
+// footer {
+//   background: $primary;
+//   text-align: center;
+//   color: $white;
+//   padding: 20px;
+
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   height: 50px;
+// }
+
+footer {
+  background: $primary;
+  text-align: center;
+  margin-top: auto;
+  padding: 20px;
+}
