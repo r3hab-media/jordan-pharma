@@ -20,3 +20,29 @@ footer {
   margin-top: auto;
   padding: 20px;
 }
+
+.footer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &--company {
+      font-weight: 800;
+    }
+
+    &--rights {
+      font-size: .8rem;
+
+      @include tablet-small {
+        margin-left: 1rem;
+        font-size: unset;
+      }
+    }
+
+    @include tablet-small {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

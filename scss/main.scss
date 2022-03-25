@@ -16,6 +16,7 @@ html,
 body {
   overflow-x: hidden;
 }
+
 html {
   height: 100vh;
 }
@@ -30,6 +31,8 @@ body {
   font-size: 16px;
   color: $black;
   min-height: 100vh;
+  background: url('../img/background-honeycomb.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 // body {

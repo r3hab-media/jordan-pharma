@@ -159,6 +159,37 @@ header {
     @include tablet-large {
       width: 50vw;
     }
+
+    hr {
+      @include desktop-xlarge {
+        display: none;
+      }
+    }    
+
+    .nav-contact {
+      color: $white;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      position: relative;
+
+      span:first-of-type {
+        font-weight: 800;
+      }
+
+      @include desktop-xlarge {
+        display: none;
+        // position: absolute;
+        // right: 0px;
+        // top: 25px;
+        // background: #000;
+        // color: #fff;
+        // display: flex;
+        // justify-content: flex-end !important;
+        // width: fit-content;
+        // padding: 0.5rem;
+      }
+    }
   }
 }
 
@@ -195,21 +226,31 @@ header {
 .menu--active .menu {
   width: 80%;
 
+  @include tablet-small {
+    width: 40%;
+  }
+
   @include tablet-large {
     width: 50%;
   }
-}
 
-// This media query sets the menu width to be slightly smaller on a larger screen (think an iPad)
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .menu--active .menu {
-    width: 40%;
-
-    .menu-inner {
+  .menu-inner {
+    @include tablet-small {
       width: 40vw;
     }
   }
 }
+
+// This media query sets the menu width to be slightly smaller on a larger screen (think an iPad)
+// @media screen and (min-width: 768px) and (max-width: 1200px) {
+//   .menu--active .menu {
+//     width: 40%;
+
+//     .menu-inner {
+//       width: 40vw;
+//     }
+//   }
+// }
 
 // This media query styles the menu for a large environment (think a desktop)
 @media screen and (min-width: 1200px) {

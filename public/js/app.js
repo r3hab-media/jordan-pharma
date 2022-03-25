@@ -6,3 +6,6 @@ for (var i = 0; i < openMenu.length; i++) {
     body.classList.toggle("menu--active");
   });  
 }
+
+var currYr = new Date().getFullYear();
+thisYear.textContent = currYr; 
