@@ -1,6 +1,8 @@
 @use './colors'as *;
 @use './nav'as *;
+// @use './headings' as *;
 @use './footer'as *;
+@use './slider' as *;
 
 ::-webkit-scrollbar {
   display: none;
@@ -48,7 +50,7 @@ body {
 main {
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 5rem;
+  padding-top: 1rem;
 }
 
 // footer {
@@ -63,3 +65,18 @@ main {
 //   bottom: 0;
 //   height: 50px;
 // }
+
+section article {
+
+  h3 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
+

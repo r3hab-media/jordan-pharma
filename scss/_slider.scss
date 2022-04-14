@@ -1,0 +1,110 @@
+@use './colors' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  @include flex(column);
+
+  @include tablet-small {
+    width: 50%;
+    flex-direction: row;
+  }
+
+  &-slide {
+    height: 50vh;
+    text-align: center;
+    position: relative;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    &__content {
+      padding: .5rem;
+      position: absolute;
+      text-align: left;
+      color: $white;
+      background: linear-gradient(to right, rgba($black, 0.4), rgba($black, 0.4));
+      // background-size: cover;
+      // height: 100vh;
+
+      h2 {
+        font-size: 2rem;
+
+        &+h5 {
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &.testimonial-slide {
+      background: rgba($white, .3);
+      height: fit-content;
+      @include flex(column);
+      padding: 1rem;
+      text-align: justify;
+
+      i.fa-quote-left {
+        color: rgba($secondary, .3);
+        align-self: flex-start;
+      }
+
+      &-text h5 {
+        color: red;
+      }
+    }
+  }
+
+  &__lower {
+    display: flex;
+    background: $primary;
+    padding: .5rem;
+  }
+
+  &__inner {
+    border: 1px solid $white;
+    width: 100%;
+    padding: .5rem;
+
+    .logo-icon {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 300px;
+      }
+    }
+
+    &--title {
+      text-align: center; 
+      h3 {
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+    }
+
+    hr {
+      width: 2rem;
+      background: $white;
+    }
+  }
+}
