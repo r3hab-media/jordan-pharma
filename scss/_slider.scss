@@ -2,10 +2,86 @@
 @use './breakpoints' as *;
 @use './mixins' as *;
 
+.slider-box {
+  @include flex(column);
+
+  // &, &__left, &__right {
+  //   border: 1px dashed red;
+  // }
+
+  &__left, &__right {
+    @include flex-center-column;
+    flex: 1;
+  }
+
+  &__left {
+    order: 2;
+
+    @include tablet-small {
+      order: 1;
+    }    
+  }
+
+  &__right {
+    order: 1;
+
+    @include tablet-small {
+      order: 2;
+    }
+  }
+
+  &__left {
+    &--content {
+      display: flex;
+      background: $primary;
+      padding: .5rem;     
+    }
+
+    &--inner {
+      border: 1px solid $white;
+      width: 100%;
+      padding: .5rem;
+
+      .logo-icon {
+        display: flex;
+        justify-content: center;
+
+        img {
+          max-width: 300px;
+        }
+      }
+    }   
+    
+    hr {
+      width: 2rem;
+      background: $white;
+    }
+
+    &--title {
+      text-align: center; 
+      h3 {
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+    }    
+  }
+
+  @include tablet-small {
+    @include flex(row);
+  }
+
+  @include tablet-large {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 .swiper {
   width: 100%;
   height: 100%;
   @include flex(column);
+  
 
   @include tablet-small {
     width: 50%;
@@ -49,12 +125,12 @@
       }
     }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    // img {
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    // }
 
     &.testimonial-slide {
       background: rgba($white, .3);
@@ -71,40 +147,6 @@
       &-text h5 {
         color: red;
       }
-    }
-  }
-
-  &__lower {
-    display: flex;
-    background: $primary;
-    padding: .5rem;
-  }
-
-  &__inner {
-    border: 1px solid $white;
-    width: 100%;
-    padding: .5rem;
-
-    .logo-icon {
-      display: flex;
-      justify-content: center;
-
-      img {
-        max-width: 300px;
-      }
-    }
-
-    &--title {
-      text-align: center; 
-      h3 {
-        text-transform: uppercase;
-        font-weight: 300;
-      }
-    }
-
-    hr {
-      width: 2rem;
-      background: $white;
     }
   }
 }

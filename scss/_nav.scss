@@ -4,18 +4,70 @@
 @use './headings'as *;
 @use './mixins'as *;
 
+.top {
+  @include flex(column);
+  padding: .875rem 1rem;
+
+  @include tablet-small {
+    flex-direction: row;
+  }
+
+  &__left {
+    flex: 1;
+    img {
+      display: flex;
+      margin: 0 auto;
+      width: calc(100% - 1rem);
+      max-width: 300px;
+      height: auto;
+    }
+  }
+
+  &__right {
+    @include flex-center-column;
+    flex: 1;
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      align-self: center;
+      margin-bottom: 0;
+
+      @include tablet-small {
+        font-size: 1.5rem;
+      }
+    }
+    span {
+      font-size: 1.5rem;
+      a {
+        text-decoration: none;
+        color: $secondary;
+        font-weight: 900;
+      }
+    }    
+  }
+
+  // @include tablet-medium {
+  //   flex-direction: row;
+  //   justify-content: space-evenly;
+  // }
+}
+
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  position: fixed;
-  top: 0;
+  // position: fixed;
+  // top: 0;
   overflow: visible;
   z-index: 100;
   background-color: transparent;
   width: 100%;
   padding: .5rem .5rem;
   background: $black;
+
+  position: sticky;
+  top: 0;
+  // align-self: flex-start;
 
   h1 {
     font-size: 2.2rem;
@@ -255,7 +307,7 @@ header {
 // This media query styles the menu for a large environment (think a desktop)
 @media screen and (min-width: 1200px) {
   header {
-    height: 5rem;
+    height: 4rem;
 
     span.menu-control-open,
     span.menu-control-close {

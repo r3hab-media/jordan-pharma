@@ -1,5 +1,6 @@
 @use './colors'as *;
 @use './nav'as *;
+@use './breakpoints' as *;
 // @use './headings' as *;
 @use './footer'as *;
 @use './slider' as *;
@@ -12,11 +13,6 @@
 *:before,
 *:after {
   box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
 }
 
 html {
@@ -37,6 +33,8 @@ body {
   background-size: cover;
 }
 
+
+
 // body {
 //   margin: 0;
 //   padding: 0;
@@ -51,6 +49,13 @@ main {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include desktop-xlarge {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 // footer {
