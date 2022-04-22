@@ -12,14 +12,32 @@ if (getPort === '5500') {
   document.getElementsByTagName("head")[0].appendChild(base);
 }
 
-var body = document.querySelector("body");
-var openMenu = document.querySelectorAll(".menuControl, .menu nav a");
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+const items = document.querySelectorAll(".item");
 
-for (var i = 0; i < openMenu.length; i++) {
-  openMenu[i].addEventListener("click", function (e) {
-    body.classList.toggle("menu--active");
-  });  
+/* Toggle mobile menu */
+function toggleMenu() {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars-staggered'></i>";
+  } else {
+    menu.classList.add("active");
+    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-xmark'></i>";
+  }
 }
+
+/* Event Listeners */
+toggle.addEventListener("click", toggleMenu, false);
+
+// var body = document.querySelector("body");
+// var openMenu = document.querySelectorAll(".menuControl, .menu nav a");
+
+// for (var i = 0; i < openMenu.length; i++) {
+//   openMenu[i].addEventListener("click", function (e) {
+//     body.classList.toggle("menu--active");
+//   });  
+// }
 
 var currYr = new Date().getFullYear();
 thisYear.textContent = currYr; 
