@@ -4,13 +4,17 @@
 
 .slider-box {
   @include flex(column);
+  
+  // @include tablet-small {
+  //   max-height: 30vh;
+  // }
 
   // &, &__left, &__right {
   //   border: 1px dashed red;
   // }
 
   &__left, &__right {
-    @include flex-center-column;
+    @include flex(column);
     flex: 1;
   }
 
@@ -27,6 +31,33 @@
 
     @include tablet-small {
       order: 2;
+    }
+
+    .slideshow {
+      max-width: 1000px;
+      // height: 100%;
+      position: relative;
+      margin: auto;
+
+      &__slide {
+        display: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        &.fade {
+          animation-name: fade;
+          animation-duration: 1s;
+        }
+  
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }        
+      }
     }
   }
 
@@ -74,79 +105,5 @@
     width: 1200px;
     max-width: 1200px;
     margin: 0 auto;
-  }
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-  @include flex(column);
-  
-
-  @include tablet-small {
-    width: 50%;
-    flex-direction: row;
-  }
-
-  &-slide {
-    height: 50vh;
-    text-align: center;
-    position: relative;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-
-    &__content {
-      padding: .5rem;
-      position: absolute;
-      text-align: left;
-      color: $white;
-      background: linear-gradient(to right, rgba($black, 0.4), rgba($black, 0.4));
-      // background-size: cover;
-      // height: 100vh;
-
-      h2 {
-        font-size: 2rem;
-
-        &+h5 {
-          letter-spacing: 2px;
-        }
-      }
-    }
-
-    // img {
-    //   display: block;
-    //   width: 100%;
-    //   height: 100%;
-    //   object-fit: cover;
-    // }
-
-    &.testimonial-slide {
-      background: rgba($white, .3);
-      height: fit-content;
-      @include flex(column);
-      padding: 1rem;
-      text-align: justify;
-
-      i.fa-quote-left {
-        color: rgba($secondary, .3);
-        align-self: flex-start;
-      }
-
-      &-text h5 {
-        color: red;
-      }
-    }
   }
 }

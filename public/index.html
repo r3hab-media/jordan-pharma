@@ -7,51 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jordan Pharma | Home</title>
   <!-- <script src="js/includes.js" async></script> -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <div class="top">
     <div class="top__left">
-      <img src="img/logo-black.png" alt="">
+      <img src="img/logo.png" alt="">
     </div>
     <div class="top__right">
       <h3>Have questions? Give us a call!</h3>
       <span><a href="tel:2403081719">240-308-1719</a></span>
     </div>
   </div>
-  <!-- <header>
-    <a href="index.html">
-      <img class="logo" src="img/logo.png" alt="">
-    </a>
-    <span class="menu-control-open menuControl">
-      <i class="fa-solid fa-bars"></i>
-    </span>
-    <div class="menu">
-      <div class="menu-inner">
-        <span class="menu-control-close menuControl">
-          <i class="fa-solid fa-xmark"></i>
-        </span>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="our-solutions.html">Our Solutions</a>
-          <a href="areas-of-expertise.html">Areas of Expertise</a>
-          <a href="contact-us.html">Contact Us</a>
-        </nav>
-        <hr>
-        <div class="nav-contact">
-          <span>Need to call us?</span>
-          <span>
-            <a href="tel:2403081719">240-308-1719</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </header> -->
   <nav>
     <ul class="menu">
-      <!-- <li class="logo"><a href="#">Creative Mind Agency</a></li> -->
       <li class="item">
         <a href="#">Home</a>
       </li>
@@ -88,25 +58,23 @@
       </div>
     </div>
     <div class="slider-box__right">
-      <!-- <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img/pharmacist-business-meeting.jpg" alt="picture of pharmacist business meeting">
-          </div>
-          <div class="swiper-slide">
-            <img src="img/pharmacist-conference.jpg" alt="picture of pharmacist conference">
-          </div>
-          <div class="swiper-slide">
-            <img src="img/pharmacists-working.jpg" alt="picture of pharmacists working">
-          </div>
-          <div class="swiper-slide">
-            <img src="img/fda-stamp.jpg" alt="picture of fda stamp">
-          </div>
-          <div class="swiper-slide">
-            <img src="img/single-pharmacist-working.jpg" alt="picture of single pharmacist working">
-          </div>    
+      <div class="slideshow">
+        <div class="slideshow__slide fade">
+          <img src="img/pharmacist-business-meeting.jpg" alt="">
         </div>
-      </div> -->
+        <div class="slideshow__slide fade">
+          <img src="img/pharmacist-conference.jpg" alt="">
+        </div>
+        <div class="slideshow__slide fade">
+          <img src="img/pharmacists-working.jpg" alt="">
+        </div>
+        <div class="slideshow__slide fade">
+          <img src="img/fda-stamp.jpg" alt="">
+        </div>
+        <div class="slideshow__slide fade">
+          <img src="img/single-pharmacist-working.jpg" alt="">
+        </div>
+      </div>
     </div>
   </div>
   <main>
@@ -135,24 +103,6 @@
           quos minus, autem, quidem animi? Repudiandae, ipsum? Iusto aut fuga veritatis aperiam praesentium autem
           assumenda distinctio sint dignissimos numquam eaque, excepturi corporis?</p>
       </article>
-
-      <!-- <article>
-        <div class="testimonial">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide testimonial-slide">
-              <i class="fa-solid fa-quote-left fa-5x"></i>
-              <div class="testimonial-slide-text">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia libero assumenda aspernatur eaque quam, voluptatibus atque nesciunt, provident unde odio aliquid, molestiae error quod soluta.</p>
-                <h5>Lorem Ipsum</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonial-slide">
-              World
-            </div>          
-          </div>
-        </div>        
-      </article> -->
-
     </section>
   </main>
   <footer>
@@ -166,28 +116,5 @@
     </div>
   </footer>
   <script src="js/app.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-    //slider
-    var swiper = new Swiper(".swiper", {
-      slidesPerView: 1,
-      centerSlides: true,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false
-      }
-    });
-
-    //testimonial
-    var testimonial = new Swiper(".testimonial", {
-      slidesPerView: 1,
-      centerSlides: true
-      // autoplay: {
-      // delay: 3500,
-      // disableOnInteraction: false
-      // }
-    });
-  </script>
 </body>
-
 </html>

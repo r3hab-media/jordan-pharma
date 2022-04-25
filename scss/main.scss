@@ -4,9 +4,21 @@
 // @use './headings' as *;
 @use './footer'as *;
 @use './slider' as *;
+@use './cards' as *;
+@use './buttons' as *;
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+/* Firefox and IE */
+html {
+  /* remove scrollbar from Firefox */
+  overflow: auto;
+  scrollbar-width: none;
+
+  /* remove scrollbar from IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 *,

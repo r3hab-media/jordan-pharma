@@ -9,47 +9,112 @@
   <!-- <script src="js/includes.js" async></script> -->
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-  <header>
-    <a href="index.html">
-      <img class="logo" src="img/logo.png" alt="">
-    </a>
-    <span class="menu-control-open menuControl">
-      <i class="fa-solid fa-bars"></i>
-    </span>
-    <div class="menu">
-      <div class="menu-inner">
-        <span class="menu-control-close menuControl">
-          <i class="fa-solid fa-xmark"></i>
-        </span>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="our-solutions.html">Our Solutions</a>
-          <a href="areas-of-expertise.html">Areas of Expertise</a>
-          <a href="contact-us.html">Contact Us</a>
-        </nav>
-        <hr>
-        <div class="nav-contact">
-          <span>Need to call us?</span>
-          <span>
-            <a href="tel:2403081719">240-308-1719</a>
-          </span>
-          <!-- <span class="text">Need us? | </span><a href="tel:2403081719">240-308-1719</a> -->
+  <div class="top">
+    <div class="top__left">
+      <img src="img/logo.png" alt="">
+    </div>
+    <div class="top__right">
+      <h3>Have questions? Give us a call!</h3>
+      <span><a href="tel:2403081719">240-308-1719</a></span>
+    </div>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li class="item">
+        <a href="#">Home</a>
+      </li>
+      <li class="item">
+        <a href="our-solutions.html">Our Solutions</a>
+      </li>
+      <li class="item">
+        <a href="areas-of-expertise.html">Areas of Expertise</a>
+      </li>
+      <li class="item">
+        <a href="contact-us.html">Contact Us</a>
+      </li>
+      <li class="toggle">
+        <a href="javascript:;">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h3>Our Solutions</h3>
+    <div class="cards">
+      <div class="card">
+        <h4 class="card__title">Chemistry Manufacturing &amp; Controls (CMC)</h4>
+        <div class="card__content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, quidem corporis! Facilis ea quibusdam
+            provident ipsa, eveniet odio, harum animi libero, asperiores dolorum aut qui quod. Provident minus
+            perspiciatis consectetur.</p>
+          <button class="accordion">How do we support your CMC needs?</button>
+          <div class="panel">
+            <div class="panel-section">
+              <h5>Process:</h5>
+              <ul>
+                <li>Troubleshooting problems with the manufacturing process</li>
+                <li>Reviewing Batch Records</li>
+                <li>Assessing Viral Clearance for Biologics</li>
+              </ul>
+            </div>
+            <div class="panel-section">
+              <h5>Qualilty Control</h5>
+              <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>    
-  </header>
-  <main></main>
+      <div class="card">
+        <h4 class="card__title">Regulatory Affairs</h4>
+        <div class="card__content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, quidem corporis! Facilis ea quibusdam
+            provident ipsa, eveniet odio, harum animi libero, asperiores dolorum aut qui quod. Provident minus
+            perspiciatis consectetur.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h4 class="card__title">Compliance &amp; Audits</h4>
+        <div class="card__content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, quidem corporis! Facilis ea quibusdam
+            provident ipsa, eveniet odio, harum animi libero, asperiores dolorum aut qui quod. Provident minus
+            perspiciatis consectetur.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h4 class="card__title">Executive Consulting</h4>
+        <div class="card__content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, quidem corporis! Facilis ea quibusdam
+            provident ipsa, eveniet odio, harum animi libero, asperiores dolorum aut qui quod. Provident minus
+            perspiciatis consectetur.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h4 class="card__title">Training</h4>
+        <div class="card__content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, quidem corporis! Facilis ea quibusdam
+            provident ipsa, eveniet odio, harum animi libero, asperiores dolorum aut qui quod. Provident minus
+            perspiciatis consectetur.</p>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer>
     <div class="footer__content">
       <div class="footer__content--company">
         Jordan Pharma Compliance
-      </div> 
+      </div>
       <div class="footer__content--rights">
         All Rights Reserved &copy;<span id="thisYear"></span>
-      </div>  
+      </div>
     </div>
-  </footer>  
+  </footer>
   <script src="js/app.js"></script>
 </body>
 

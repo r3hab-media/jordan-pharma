@@ -39,6 +39,38 @@ toggle.addEventListener("click", toggleMenu, false);
 //   });  
 // }
 
+//slides
+let slideIndex = 0;
+document.querySelector('.slideshow') ? showSlides() : null;
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slideshow__slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";    
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+
+//accordion
+let acc = document.getElementsByClassName("accordion");
+let j;
+
+for (j = 0; j < acc.length; j++) {
+  acc[j].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
 var currYr = new Date().getFullYear();
 thisYear.textContent = currYr; 
 

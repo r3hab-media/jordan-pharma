@@ -1,0 +1,30 @@
+@use './breakpoints' as *;
+@use './colors' as *;
+@use './functions' as *;
+@use './mixins' as *;
+@use './variables' as *;
+@use './accordion' as *;
+
+.cards {
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: $blue-1;
+    padding: 1rem;
+    transition: $transition;
+    margin-bottom: .5rem;
+    
+    // &:hover {
+    //   background: $blue-2;
+    //   color: white;
+    // }
+  
+    &__title {
+      text-transform: uppercase;
+      font-weight: weight(light);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use './colors' as *;
+@use './functions' as *;
+@use './mixins' as *;
+@use './variables' as *;
+
+.btn {
+  background: $secondary;
+  width: fit-content;
+  padding: .5rem .75rem;
+  color: $white;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background: $blue-2;
+  }
+}
