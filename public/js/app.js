@@ -55,6 +55,13 @@ function showSlides() {
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
+window.onresize = function resizeHandler() {
+  const left = document.querySelector(".slider-box__left--content");
+  const right = document.querySelector(".slider-box__right");
+  right.style.height = `${left.clientHeight}px`;
+  right.style.width = `${left.clientWidth}px`;
+};
+
 //accordion
 let acc = document.getElementsByClassName("accordion");
 let j;

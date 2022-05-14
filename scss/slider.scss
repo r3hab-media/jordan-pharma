@@ -1,10 +1,10 @@
-@use './colors' as *;
-@use './breakpoints' as *;
-@use './mixins' as *;
+@use './colors'as *;
+@use './breakpoints'as *;
+@use './mixins'as *;
 
 .slider-box {
   @include flex(column);
-  
+
   // @include tablet-small {
   //   max-height: 30vh;
   // }
@@ -13,7 +13,8 @@
   //   border: 1px dashed red;
   // }
 
-  &__left, &__right {
+  &__left,
+  &__right {
     @include flex(column);
     flex: 1;
   }
@@ -23,7 +24,7 @@
 
     @include tablet-small {
       order: 1;
-    }    
+    }
   }
 
   &__right {
@@ -38,25 +39,34 @@
       // height: 100%;
       position: relative;
       margin: auto;
+      height: 100%;
+      width: 100%;
 
       &__slide {
         display: none;
+        height: 100%;
+        width: 100%;
 
         img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &.fade {
           animation-name: fade;
           animation-duration: 1s;
         }
-  
+
         @keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-        }        
+          from {
+            opacity: .4
+          }
+
+          to {
+            opacity: 1
+          }
+        }
       }
     }
   }
@@ -65,7 +75,7 @@
     &--content {
       display: flex;
       background: $primary;
-      padding: .5rem;     
+      padding: .5rem;
     }
 
     &--inner {
@@ -81,20 +91,21 @@
           max-width: 300px;
         }
       }
-    }   
-    
+    }
+
     hr {
       width: 2rem;
       background: $white;
     }
 
     &--title {
-      text-align: center; 
+      text-align: center;
+
       h3 {
         text-transform: uppercase;
         font-weight: 300;
       }
-    }    
+    }
   }
 
   @include tablet-small {
@@ -102,8 +113,8 @@
   }
 
   @include tablet-large {
-    width: 1200px;
-    max-width: 1200px;
+    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
   }
 }

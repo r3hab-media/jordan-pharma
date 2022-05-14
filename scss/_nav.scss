@@ -3,6 +3,7 @@
 @use './fonts'as *;
 @use './headings'as *;
 @use './mixins'as *;
+@use './variables' as *;
 
 .top {
   @include flex(column);
