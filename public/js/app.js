@@ -73,9 +73,37 @@ for (j = 0; j < acc.length; j++) {
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = panel.scrollHeight * 1.2 + "px";
     } 
   });
+}
+
+//quote slider
+var quoteIndex = 1;
+showQuotes(quoteIndex);
+
+function plusQuotes(n) {
+  showQuotes(quoteIndex += n);
+}
+
+function currentQuote(n) {
+  showQuotes(quoteIndex = n);
+}
+
+function showQuotes(n) {
+  var i;
+  var quotes = document.getElementsByClassName("myQuotes");
+  var dots = document.getElementsByClassName("dot");
+  if (n > quotes.length) {quoteIndex = 1}    
+  if (n < 1) {quoteIndex = quotes.length}
+  for (i = 0; i < quotes.length; i++) {
+    quotes[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  quotes[quoteIndex-1].style.display = "block";  
+  dots[quoteIndex-1].className += " active";
 }
 
 var currYr = new Date().getFullYear();

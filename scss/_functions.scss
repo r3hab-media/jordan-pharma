@@ -2,7 +2,6 @@ $font-weights: ('light': 300,
   'normal': 400,
   'bold': 700,
   'bolder': 800,
-  'extrabold': 800,
   'boldest': 900);
 
   @function weight($weight-name) {
