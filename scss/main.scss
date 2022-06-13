@@ -1,5 +1,7 @@
 @use './colors'as *;
 @use './breakpoints' as *;
+@use './functions' as *;
+@use './variables' as *;
 @use './nav'as *;
 @use './headings' as *;
 @use './footer'as *;
@@ -63,7 +65,7 @@ main {
   padding-right: 1rem;
   padding-top: 1rem;
   max-width: 1200px;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   @include desktop-xlarge {
     padding-left: 0;
@@ -95,6 +97,55 @@ section article {
   p {
     font-size: 1rem;
     letter-spacing: 1px;
+  }
+
+  .expertise {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    @include tablet-small {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    h5 {
+      font-size: 1rem;
+      font-weight: weight(normal);
+      margin: .2rem;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include tablet-small {
+        padding: 1rem;   
+        background: rgba($white, .5);
+        border: 1px solid $blue-2;
+      }
+      
+      a {
+        color: $blue-3;
+      }
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  textarea, input {
+    border-radius: $radius;
+    background-color: rgba($white, .8);
+    font-size: 1.2rem;
+    margin: .5rem 0;
+    padding: 1rem;
+
+    &::placeholder {
+      font-style: italic;
+      font-size: 1rem;
+    }
   }
 }
 

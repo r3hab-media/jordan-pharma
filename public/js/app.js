@@ -1,3 +1,6 @@
+var currYr = new Date().getFullYear();
+thisYear.textContent = currYr; 
+
 // const id = "base-url";
 const getPort = window.location.port;
 const devBase = 'http://r3hab-media:5500/public/';
@@ -106,6 +109,4 @@ function showQuotes(n) {
   dots[quoteIndex-1].className += " active";
 }
 
-var currYr = new Date().getFullYear();
-thisYear.textContent = currYr; 
 
