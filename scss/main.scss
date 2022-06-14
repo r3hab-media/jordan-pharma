@@ -48,7 +48,29 @@ body {
   background-size: cover;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
 
+h3 + p, h3 + h4 {
+  margin-top: 1rem;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+p + .accordion {
+  margin-top: 1rem;
+}
+
+p + .cards {
+  margin-top: 1rem;
+}
+
+.accordion__panel + h5 {
+  margin-top: 1rem;
+}
 
 // body {
 //   margin: 0;
@@ -65,7 +87,7 @@ main {
   padding-right: 1rem;
   padding-top: 1rem;
   max-width: 1200px;
-  // margin: 0 auto;
+  margin: 0 auto;
 
   @include desktop-xlarge {
     padding-left: 0;

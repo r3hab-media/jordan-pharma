@@ -25,6 +25,10 @@
     &__title {
       text-transform: uppercase;
       font-weight: weight(light);
+
+      & + .card__content {
+        margin-top: 1rem;
+      }
     }
   }
 }

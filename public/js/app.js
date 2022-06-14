@@ -82,6 +82,12 @@ for (j = 0; j < acc.length; j++) {
 }
 
 //quote slider
+window.onload = function() {
+  setInterval(function() {
+    plusQuotes(1);
+  }, 20000);
+}
+
 var quoteIndex = 1;
 showQuotes(quoteIndex);
 
