@@ -48,10 +48,6 @@ body {
   background-size: cover;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
 h3 + p, h3 + h4 {
   margin-top: 1rem;
 }
@@ -110,6 +106,8 @@ main {
 
 section article {
 
+  padding: 1rem 0;
+
   h3 {
     font-weight: 300;
     letter-spacing: 2px;
@@ -152,6 +150,13 @@ section article {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+.font-light {
+  font-weight: weight(normal);
+}
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -159,6 +164,7 @@ section article {
 
   textarea, input {
     border-radius: $radius;
+    border-color: transparent;
     background-color: rgba($white, .8);
     font-size: 1.2rem;
     margin: .5rem 0;

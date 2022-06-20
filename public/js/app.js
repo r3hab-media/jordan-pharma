@@ -1,5 +1,5 @@
 var currYr = new Date().getFullYear();
-thisYear.textContent = currYr; 
+thisYear.textContent = currYr;
 
 // const id = "base-url";
 const getPort = window.location.port;
@@ -32,15 +32,6 @@ function toggleMenu() {
 
 /* Event Listeners */
 toggle.addEventListener("click", toggleMenu, false);
-
-// var body = document.querySelector("body");
-// var openMenu = document.querySelectorAll(".menuControl, .menu nav a");
-
-// for (var i = 0; i < openMenu.length; i++) {
-//   openMenu[i].addEventListener("click", function (e) {
-//     body.classList.toggle("menu--active");
-//   });  
-// }
 
 //slides
 let slideIndex = 0;
@@ -81,38 +72,34 @@ for (j = 0; j < acc.length; j++) {
   });
 }
 
-//quote slider
-window.onload = function() {
-  setInterval(function() {
-    plusQuotes(1);
-  }, 20000);
-}
+const quotesExist = document.querySelectorAll('.myQuotes').length > 0;
 
-var quoteIndex = 1;
-showQuotes(quoteIndex);
-
-function plusQuotes(n) {
-  showQuotes(quoteIndex += n);
-}
-
-function currentQuote(n) {
-  showQuotes(quoteIndex = n);
-}
-
-function showQuotes(n) {
-  var i;
-  var quotes = document.getElementsByClassName("myQuotes");
-  var dots = document.getElementsByClassName("dot");
-  if (n > quotes.length) {quoteIndex = 1}    
-  if (n < 1) {quoteIndex = quotes.length}
-  for (i = 0; i < quotes.length; i++) {
-    quotes[i].style.display = "none";  
+if (quotesExist) {
+  window.onload = function() {
+    setInterval(function() {
+      plusQuotes(1);
+    }, 20000);
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  
+  var quoteIndex = 1;
+  showQuotes(quoteIndex);
+  
+  function plusQuotes(n) {
+    showQuotes(quoteIndex += n);
   }
-  quotes[quoteIndex-1].style.display = "block";  
-  dots[quoteIndex-1].className += " active";
+  
+  function currentQuote(n) {
+    showQuotes(quoteIndex = n);
+  }
+
+  function showQuotes(n) {
+    var i;
+    var quotes = document.getElementsByClassName("myQuotes");
+    if (n > quotes.length) {quoteIndex = 1}    
+    if (n < 1) {quoteIndex = quotes.length}
+    for (i = 0; i < quotes.length; i++) {
+      quotes[i].style.display = "none";  
+    }
+    quotes[quoteIndex-1].style.display = "block";
+  }
 }
-
-
