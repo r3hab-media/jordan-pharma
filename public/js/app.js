@@ -1,60 +1,64 @@
-var currYr = new Date().getFullYear();
-thisYear.textContent = currYr;
+// var currYr = new Date().getFullYear();
+// thisYear.textContent = currYr;
 
 // const id = "base-url";
-const getPort = window.location.port;
-const devBase = 'http://r3hab-media:5500/public/';
-const prodBase = 'https://jordan-pharma-dev.web.app';
-const base = document.createElement('base');
+// const getPort = window.location.port;
+// const devBase = 'http://r3hab-media:5500/public/';
+// const prodBase = 'https://jordan-pharma-dev.web.app';
+// const base = document.createElement('base');
 
-if (getPort === '5500') {
-  base.href = devBase;
-  document.getElementsByTagName("head")[0].appendChild(base);
-} else {
-  base.href = prodBase;
-  document.getElementsByTagName("head")[0].appendChild(base);
-}
+// if (getPort === '5500') {
+//   base.href = devBase;
+//   document.getElementsByTagName("head")[0].appendChild(base);
+// } else {
+//   base.href = prodBase;
+//   document.getElementsByTagName("head")[0].appendChild(base);
+// }
 
-const toggle = document.querySelector(".toggle");
-const menu = document.querySelector(".menu");
-const items = document.querySelectorAll(".item");
+// const toggle = document.querySelector(".toggle");
+// const menu = document.querySelector(".menu");
+// const items = document.querySelectorAll(".item");
 
-/* Toggle mobile menu */
-function toggleMenu() {
-  if (menu.classList.contains("active")) {
-    menu.classList.remove("active");
-    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars-staggered'></i>";
-  } else {
-    menu.classList.add("active");
-    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-xmark'></i>";
-  }
-}
+// /* Toggle mobile menu */
+// function toggleMenu() {
+//   if (menu.classList.contains("active")) {
+//     menu.classList.remove("active");
+//     toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars-staggered'></i>";
+//   } else {
+//     menu.classList.add("active");
+//     toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-xmark'></i>";
+//   }
+// }
 
-/* Event Listeners */
-toggle.addEventListener("click", toggleMenu, false);
+// /* Event Listeners */
+// toggle.addEventListener("click", toggleMenu, false);
 
 //slides
-let slideIndex = 0;
-document.querySelector('.slideshow') ? showSlides() : null;
+const sliderExist = document.querySelectorAll('.slider-box').length > 0;
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("slideshow__slide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+if (sliderExist) {
+  let slideIndex = 0;
+  document.querySelector('.slideshow') ? showSlides() : null;
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slideshow__slide");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";    
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";    
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
+  
+  window.onresize = function resizeHandler() {
+    const left = document.querySelector(".slider-box__left--content");
+    const right = document.querySelector(".slider-box__right");
+    right.style.height = `${left.clientHeight}px`;
+    right.style.width = `${left.clientWidth}px`;
+  };  
 }
-
-window.onresize = function resizeHandler() {
-  const left = document.querySelector(".slider-box__left--content");
-  const right = document.querySelector(".slider-box__right");
-  right.style.height = `${left.clientHeight}px`;
-  right.style.width = `${left.clientWidth}px`;
-};
 
 //accordion
 let acc = document.getElementsByClassName("accordion");
