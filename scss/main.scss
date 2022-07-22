@@ -157,7 +157,7 @@ section article {
   font-weight: weight(normal);
 }
 
-.contact {
+.contact form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -174,6 +174,13 @@ section article {
       font-style: italic;
       font-size: 1rem;
     }
+  }
+
+  .success {
+    background-color: $primary;
+    margin: .5rem 0;
+    padding: 1rem .5rem;
+    display: none;
   }
 }
 
