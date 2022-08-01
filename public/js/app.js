@@ -92,3 +92,5 @@ changePageTitle = () => {
   document.querySelector('title').textContent = `Jordan Pharma Compliance | ${newPageTitle}`;
 }
 window.addEventListener('onload', changePageTitle());
+
+
