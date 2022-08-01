@@ -53,20 +53,3 @@ exports.sendMailOverHTTP = functions.https.onRequest((req, res) => {
       return res.send(`Sent! ${data}`);
   });
 });
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
-
-//oyiuskfosfsnokvh
-/* <p>
-  <b>Full Name: </b>${req.body.name}<br>
-  <b>Company Name: </b>${req.body.company}<br>
-  <b>Email: </b>${req.body.email}<br>
-  <b>Phone: </b>${req.body.phone}<br>
-  <b>Message: </b>${req.body.message}<br>
-</p> */

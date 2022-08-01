@@ -1,10 +1,7 @@
-// var currYr = new Date().getFullYear();
-// thisYear.textContent = currYr;
-
 // const id = "base-url";
 // const getPort = window.location.port;
 // const devBase = 'http://r3hab-media:5500/public/';
-// const prodBase = 'https://jordan-pharma-dev.web.app';
+// const prodBase = 'https://jordan-pharma.com';
 // const base = document.createElement('base');
 
 // if (getPort === '5500') {
@@ -14,24 +11,6 @@
 //   base.href = prodBase;
 //   document.getElementsByTagName("head")[0].appendChild(base);
 // }
-
-// const toggle = document.querySelector(".toggle");
-// const menu = document.querySelector(".menu");
-// const items = document.querySelectorAll(".item");
-
-// /* Toggle mobile menu */
-// function toggleMenu() {
-//   if (menu.classList.contains("active")) {
-//     menu.classList.remove("active");
-//     toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars-staggered'></i>";
-//   } else {
-//     menu.classList.add("active");
-//     toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-xmark'></i>";
-//   }
-// }
-
-// /* Event Listeners */
-// toggle.addEventListener("click", toggleMenu, false);
 
 //slides
 const sliderExist = document.querySelectorAll('.slider-box').length > 0;
@@ -107,3 +86,9 @@ if (quotesExist) {
     quotes[quoteIndex-1].style.display = "block";
   }
 }
+
+newPageTitle = document.querySelector('main h3').textContent;
+changePageTitle = () => {  
+  document.querySelector('title').textContent = `Jordan Pharma Compliance | ${newPageTitle}`;
+}
+window.addEventListener('onload', changePageTitle());
