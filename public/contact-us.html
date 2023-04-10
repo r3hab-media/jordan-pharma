@@ -28,13 +28,15 @@
 
   <!-- social media -->
   <meta property="og:title" content="Jordan Pharma Compliance">
-  <meta property="og:description" content="JPC provides pharmaceutical consulting services which support client programs inclusive of small molecules to biologic products from pre-clinical through post marketing.">
+  <meta property="og:description"
+    content="JPC provides pharmaceutical consulting services which support client programs inclusive of small molecules to biologic products from pre-clinical through post marketing.">
   <meta property="og:image" content="https://jordan-pharma.imgix.net/facebook-og.jpg?auto=format">
   <meta property="og:url" content="https://jordan-pharma.com">
-  <meta name="twitter:card" content="https://jordan-pharma.imgix.net/twitter-card.jpg?auto=format"> 
+  <meta name="author" content="Jared Newnam">
+  <meta name="twitter:card" content="https://jordan-pharma.imgix.net/twitter-card.jpg?auto=format">
   <meta property="og:site_name" content="Jordan Pharma Compliance">
   <meta name="twitter:image:alt" content="Jordan Pharma Compliance">
-    
+
   <link rel="stylesheet" href="css/main.css">
   <script type="module" src="js/includes.js"></script>
 </head>
@@ -47,17 +49,33 @@
   <main-header></main-header>
   <main>
     <h3>Contact Us</h3>
-    <div class="contact">
-      <form name="contactForm" id="contactForm">
-        <input type="text" name="name" id="name" placeholder="Full Name">
-        <span id="errorMsg"></span>
-        <input type="text" name="company" id="company" placeholder="Company Name">
-        <input type="email" name="email" id="email" placeholder="Email Address">
-        <input type="text" name="phone" id="phone" placeholder="Phone Number">
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" name="submit" id="submit">
-        <p class="success">Your message has been submitted! Thank you!</p>
-      </form>      
+
+    <div class="container">
+      <div class="row">
+        <div class="cert">
+          <a href="https://bcert.me/sfvqazjzd" target="_blank">
+            <img src="img/rac-badge-7564.png" alt="image of regulatory affairs certification badge"
+              title="Click to learn more.">
+          </a>
+          <div class="social">
+            <a href="https://www.linkedin.com/company/69240387" target="_blank">
+              <i class="fa-brands fa-linkedin fa-3x"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact">
+          <form name="contactForm" id="contactForm">
+            <input type="text" name="name" id="name" placeholder="Full Name">
+            <span id="errorMsg"></span>
+            <input type="text" name="company" id="company" placeholder="Company Name">
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <input type="text" name="phone" id="phone" placeholder="Phone Number">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" name="submit" id="submit">
+            <p class="success">Your message has been submitted! Thank you!</p>
+          </form>
+        </div>
+      </div>
     </div>
   </main>
   <main-footer></main-footer>

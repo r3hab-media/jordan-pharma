@@ -83,11 +83,18 @@ main {
   padding-right: 1rem;
   padding-top: 1rem;
   max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+  // margin: 0 auto;
+
+  @include tablet-medium {
+    align-self: center;
+  }
 
   @include desktop-xlarge {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 0;    
   }
 }
 
@@ -157,10 +164,40 @@ section article {
   font-weight: weight(normal);
 }
 
+.container .row {
+  display: flex; 
+  flex-direction: column;
+
+  @include tablet-small {
+    flex-direction: row;
+  }
+
+  .cert, .contact {
+    flex-basis: 50%;
+
+    img {
+      max-width: 50%;
+    }
+
+    .fa-linkedin {
+      color: #0077b5;
+    }
+  }
+
+  .cert {
+    order: 2;
+
+    @include tablet-small {
+      order: unset;
+    }
+  }
+}
+
 .contact form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  max-width: 100%;
 
   textarea, input {
     border-radius: $radius;
@@ -183,4 +220,3 @@ section article {
     display: none;
   }
 }
-
